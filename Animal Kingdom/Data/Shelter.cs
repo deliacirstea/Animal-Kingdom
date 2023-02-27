@@ -92,7 +92,7 @@ namespace Animal_Kingdom.Data
             var adoptableAnimals = Animals.Where(e => e.AnimalStatus != AnimalStatusEnum.UnAdoptable || e.AnimalStatus != AnimalStatusEnum.SignedForAdoption).ToList();
             foreach (var item in adoptableAnimals)
             {
-                Console.WriteLine(adoptableAnimals);
+                Console.WriteLine(item.Id + " " + item.Name + " " + item.AnimalStatus);
             }
             Menu();
         }
